@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Millat College of Modern Sciences</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    .glass-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 9999px;
+      font-weight: bold;
+      margin-top: 24px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      background: white;
+      color: #0072ff;
+      box-shadow: 0 0 25px rgba(0, 114, 255, 0.9);
+    }
+
+    .btn a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+      }
+
+      50% {
+        box-shadow: 0 0 25px rgba(0, 114, 255, 1);
+      }
+    }
+
+    .animated-text {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 2px 2px 12px rgba(0, 255, 255, 0.7);
+    }
+
+    .marquee {
+      background: linear-gradient(to right, #bab7b7dc, #ffff);
+      color: #0f172a;
+      font-weight: 700;
+      padding: 14px;
+      border-radius: 16px;
+      margin: 24px auto;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 2px solid #38bdf8;
+      box-shadow: 0 0 20px #38bdf8;
+      max-width: 95%;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Responsive image adjustments */
+    .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .responsive-image {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 1024px) {
+      .responsive-image {
+        max-height: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .animated-text {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        padding: 10px 22px;
+      }
+
+      .marquee {
+        padding: 10px;
+      }
+      
+      .image-container, .content-container {
+        width: 100% !important;
+      }
+      
+      .responsive-image {
+        max-height: 350px;
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .animated-text {
+        font-size: 1.5rem;
+      }
+
+      .btn {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+      }
+
+      .marquee {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+      
+      .responsive-image {
+        max-height: 250px;
+      }
+      
+      .glass-container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-6">
+    <div class="main-content flex items-center gap-8 w-full max-w-6xl">
+      
+      <!-- Left Side Image -->
+      <div class="image-container w-1/2">
+        <img src="https://img.freepik.com/free-photo/three-happy-fellow-students-studying-looking-camera_1262-15296.jpg?ga=GA1.1.1146211304.1754028702&semt=ais_hybrid&w=740&q=80" 
+             alt="Happy students at Millat College"
+             class="responsive-image">
+      </div>
+
+      <!-- Right Side Content -->
+      <div class="content-container w-1/2 h-full flex flex-col justify-center text-center">
+        <div class="glass-container">
+          <h3 class="animated-text mb-6">Welcome To <br>
+            Millat College of Modern Sciences (Lodhran)
+          </h3>
+          <p class="text-lg text-white mb-6">
+            Transforming lives through Skills, Education and Research.
+          </p>
+
+          <div class="marquee mb-6">
+            <span>🚀 Admissions Are Now Open! Ready to Shape Your Future? — Learn, Build, Grow — Join Now! 🚀</span>
+          </div>
+
+          <button class="btn">
+            <a target="_blank" href="https://forms.gle/cwVVCdT7LkeXLKrf7">Apply Now</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
